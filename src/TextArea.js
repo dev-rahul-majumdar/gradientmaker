@@ -1,8 +1,8 @@
 import React from 'react';
 
-const TextArea = () => {
+const TextArea = ({txt}) => {
     return (
-        <textarea disabled='disabled'>This is the text</textarea>
+        <textarea disabled='disabled'>{txt}</textarea>
     )
 }
 
