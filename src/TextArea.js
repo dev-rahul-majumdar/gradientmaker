@@ -1,8 +1,9 @@
 import React from 'react';
+import './TextArea.css';
 
 const TextArea = ({txt}) => {
     return (
-        <textarea disabled='disabled'>{txt}</textarea>
+        <textarea className="showoutput" disabled='disabled' value={txt}></textarea>
     )
 }
 

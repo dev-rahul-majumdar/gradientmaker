@@ -9,9 +9,9 @@ class App extends Component{
 		super();
 		this.state = {
 			bg1 : '#9013FE',
-			bg2 : '#F5A623',
-			txt : 'sent from app'
+			bg2 : '#F5A623',			
 		}
+		this.state.txt = `linear-gradient(to right, ${this.state.bg1}, ${this.state.bg2})`;
 	}
 	onChange1 = (color, e) =>{
 		this.setState({bg1:color.hex});
@@ -22,13 +22,13 @@ class App extends Component{
 		this.resetTxt();
 	}
 	resetTxt = () =>{
-		const newTxt = `linear-gradient(to right, ${this.state.bg1}, ${this.state.bg2})`
-		this.setState({txt: newTxt});
+		const bg = `linear-gradient(to right, ${this.state.bg1}, ${this.state.bg2})`
+		this.setState({txt: bg});
 	}
 	render(){
 		return (
 			<div>
-				<BackGround bg1={this.state.bg1} bg2={this.state.bg2}>
+				<BackGround txt={this.state.txt} bg1={this.state.bg1} bg2={this.state.bg2}>
 					<ColorPicker bg={this.state.bg1} onChange={this.onChange1}/>
 					<ColorPicker bg={this.state.bg2} onChange={this.onChange2}/>
 					<TextArea txt={this.state.txt}/>

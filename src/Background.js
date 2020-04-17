@@ -1,7 +1,7 @@
 import React from 'react';
 import './Background.css';
 
-const BackGround = ({bg1,bg2, children})=>{
+const BackGround = ({txt, bg1,bg2, children})=>{
     const bgString = `linear-gradient(to right, ${bg1}, ${bg2})`;
     return (
         <div className='main' style={{backgroundImage: bgString}}>
