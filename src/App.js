@@ -4,6 +4,8 @@ import ColorPicker from './ColorPicker';
 import BackGround from './Background';
 import TextArea from './TextArea';
 import Groovy from './Groovy';
+import NavBar from './NavBar';
+import Content from './Content';
 
 class App extends Component{
 	constructor(){
@@ -15,18 +17,14 @@ class App extends Component{
 		}
 		this.state.txt = `linear-gradient(to right, ${this.state.bg1}, ${this.state.bg2})`; 
 	}
-	randomizer = (e) => {
+	initAnimation = (e) => {
 		if(this.animate){
-			this._startAnimation();
+			this._stopAnimation();
+			e.target.innerHTML = `Make Background Groovy!`;
 		}
 		else{
-			const c1 = this._getRandomColor();
-			const c2 = this._getRandomColor();
-			this.setState({
-				bg1: c1,
-				bg2: c2
-			});
-			this._startAnimation();
+			this.timer = setInterval(this._startAnimation, 500);
+			e.target.innerHTML = `Stop the groove!`;
 		}
 		this.animate = !this.animate;
 	}
@@ -34,8 +32,12 @@ class App extends Component{
 		clearInterval(this.timer);
 	}
 	_startAnimation = () =>{
-		clearInterval(this.timer);
-		this.timer = setInterval(this.randomizer, 500);
+		const c1 = this._getRandomColor();
+		const c2 = this._getRandomColor();
+		this.setState({
+			bg1: c1,
+			bg2: c2
+		});
 	}
 	_getRandomColor(){
 		return `#${Math.floor(Math.random()*16777215).toString(16)}`;
@@ -56,11 +58,12 @@ class App extends Component{
 		return (
 			<div>
 				<BackGround txt={this.state.txt} bg1={this.state.bg1} bg2={this.state.bg2}>
+					<NavBar/>
 					<ColorPicker bg={this.state.bg1} onChange={this.onChange1}/>
 					<ColorPicker bg={this.state.bg2} onChange={this.onChange2}/>
-					<Groovy onClick={this.randomizer}/>
-					<span>{this.state.randomC1}</span>
+					<Groovy onClick={this.initAnimation}/>
 					<TextArea txt={this.state.txt}/>
+					<Content/>
 				</BackGround>
 			</div>
 		)
