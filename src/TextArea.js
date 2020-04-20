@@ -3,7 +3,7 @@ import './TextArea.css';
 
 const TextArea = ({txt}) => {
     return (
-        <textarea className="showoutput" disabled='disabled' value={txt}></textarea>
+        <div className="showoutput">{txt}</div>
     )
 }
 
