@@ -9,6 +9,7 @@ const Content =()=>{
                 copy the css code and start using in your website. <br/><br/>
                 If you want to try something fun, click on the button above and start the groove!
             </h4>
+            <h5 class="about-me">Made with <span class="heart">&#9829;</span> by <a rel="noopener noreferrer" target="_blank" href="https://dev-rahul-majumdar.github.io">Rahul Majumdar</a></h5>
         </div>
     )
 }

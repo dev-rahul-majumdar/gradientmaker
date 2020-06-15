@@ -16,6 +16,7 @@ li a {
     transition: 1s;
     text-decoration: underline;
 }
-li a:hover:not(.active) {
+/* li a:hover:not(.active) {
     background-color: #9013FE;
-}
+
+}*/
