@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/gradientmaker/static/css/main.073aff76.chunk.css",
+    "main.js": "/gradientmaker/static/js/main.5caece7f.chunk.js",
+    "main.js.map": "/gradientmaker/static/js/main.5caece7f.chunk.js.map",
+    "runtime-main.js": "/gradientmaker/static/js/runtime-main.37516407.js",
+    "runtime-main.js.map": "/gradientmaker/static/js/runtime-main.37516407.js.map",
+    "static/js/2.f6613d8e.chunk.js": "/gradientmaker/static/js/2.f6613d8e.chunk.js",
+    "static/js/2.f6613d8e.chunk.js.map": "/gradientmaker/static/js/2.f6613d8e.chunk.js.map",
+    "index.html": "/gradientmaker/index.html",
+    "precache-manifest.ef1524426406d33c3f29410944b6d9d7.js": "/gradientmaker/precache-manifest.ef1524426406d33c3f29410944b6d9d7.js",
+    "service-worker.js": "/gradientmaker/service-worker.js",
+    "static/css/main.073aff76.chunk.css.map": "/gradientmaker/static/css/main.073aff76.chunk.css.map",
+    "static/js/2.f6613d8e.chunk.js.LICENSE.txt": "/gradientmaker/static/js/2.f6613d8e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.37516407.js",
+    "static/js/2.f6613d8e.chunk.js",
+    "static/css/main.073aff76.chunk.css",
+    "static/js/main.5caece7f.chunk.js"
+  ]
+}
